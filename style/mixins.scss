@@ -1,0 +1,18 @@
+@import "var";
+
+@mixin styleText($fz, $fw, $lh) {
+  font-size: $fz;
+  font-weight: map-get($font-weight, $fw);
+  line-height: $lh;
+}
+
+@mixin styleButton($padding, $fz, $lh) {
+  padding: $padding;
+  font-size: $fz;
+  line-height: $lh;
+}
+
+@mixin maxWidth($mx-width) {
+  max-width: $mx-width;
+  width: 100%;
+}
