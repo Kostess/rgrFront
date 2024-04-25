@@ -23,7 +23,9 @@ select {
   font: inherit;
   letter-spacing: inherit;
   word-spacing: inherit;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 option {
@@ -31,6 +33,4 @@ option {
   background: none;
   color: inherit;
   font: inherit;
-}
-
-/*# sourceMappingURL=reset.css.map */
+}/*# sourceMappingURL=reset.css.map */

@@ -622,7 +622,7 @@ body {
   }
 
   .description-card, .link-card {
-    @include styleText($fz-text-4, normal, $lh-text-5);
+    @include styleText($fz-text-3, normal, $lh-text-5);
   }
 }
 
@@ -667,14 +667,14 @@ body {
   margin-top: 70px;
   display: flex;
   gap: 138px;
+  align-items: center;
 }
 
 .body-slider {
   display: grid;
-  grid-template-columns: repeat(2, 400px) 236px;
+  grid-template-columns: repeat(2, 400px) 237px;
   grid-template-rows: repeat(2, 382px);
   gap: 20px;
-  overflow: hidden;
 
   .slide {
     background: $light-gray-3;
@@ -753,4 +753,76 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media (max-width: 1488px) {
+  .centring {
+    @include maxWidth(1320px);
+  }
+
+  .slide-text {
+    @include maxWidth(700px)
+  }
+
+  .slide-image {
+    img {
+      transform: scale(0.9);
+
+      &:first-child {
+        top: -85px;
+        right: -240px;
+      }
+    }
+  }
+
+  .catalog-items, .slider-group {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, max(400px));
+  }
+
+  .slider-group {
+    gap: 60px 20px;
+  }
+
+  .body-slider {
+    grid-template-columns: repeat(2, 336px);
+    grid-template-rows: repeat(2, 282px);
+    gap: 20px;
+  }
+
+  .card-news {
+    .title-card {
+      @include styleText($fz-text-5, bold, $lh-text-5);
+    }
+  }
+
+  .card-1 {
+    .text-card {
+      padding-left: 25px;
+    }
+  }
+
+  .how-coffee {
+    margin-top: 250px;
+  }
+
+  .text-body-item {
+    & + .text-body-item {
+      margin-top: 30px;
+    }
+  }
+
+  .card-1 {
+    .text-card {
+      *:not(:first-child) {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .finally-image {
+    transform: scale(0.8);
+    right: -68px;
+  }
 }

@@ -23,7 +23,9 @@ select {
   font: inherit;
   letter-spacing: inherit;
   word-spacing: inherit;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 option {
@@ -266,7 +268,8 @@ body {
   margin: 0 auto;
   width: auto;
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .title-card {
@@ -416,7 +419,8 @@ body {
 }
 .media-sale img {
   height: auto;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .specifications {
@@ -691,7 +695,8 @@ body {
 }
 .card-news .media {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .card-news .media img {
   width: 100%;
@@ -713,7 +718,7 @@ body {
   transition: 0.2s;
 }
 .card-news .description-card, .card-news .link-card {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 500;
   line-height: 26px;
 }
@@ -757,14 +762,14 @@ body {
   margin-top: 70px;
   display: flex;
   gap: 138px;
+  align-items: center;
 }
 
 .body-slider {
   display: grid;
-  grid-template-columns: repeat(2, 400px) 236px;
+  grid-template-columns: repeat(2, 400px) 237px;
   grid-template-rows: repeat(2, 382px);
   gap: 20px;
-  overflow: hidden;
 }
 .body-slider .slide {
   background: #E9E9E9;
@@ -847,4 +852,54 @@ body {
   align-items: center;
 }
 
-/*# sourceMappingURL=index.css.map */
+@media (max-width: 1488px) {
+  .centring {
+    max-width: 1320px;
+    width: 100%;
+  }
+  .slide-text {
+    max-width: 700px;
+    width: 100%;
+  }
+  .slide-image img {
+    transform: scale(0.9);
+  }
+  .slide-image img:first-child {
+    top: -85px;
+    right: -240px;
+  }
+  .catalog-items, .slider-group {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 400px);
+  }
+  .slider-group {
+    gap: 60px 20px;
+  }
+  .body-slider {
+    grid-template-columns: repeat(2, 336px);
+    grid-template-rows: repeat(2, 282px);
+    gap: 20px;
+  }
+  .card-news .title-card {
+    font-size: 1.5625rem;
+    font-weight: 700;
+    line-height: 26px;
+  }
+  .card-1 .text-card {
+    padding-left: 25px;
+  }
+  .how-coffee {
+    margin-top: 250px;
+  }
+  .text-body-item + .text-body-item {
+    margin-top: 30px;
+  }
+  .card-1 .text-card *:not(:first-child) {
+    margin-top: 10px;
+  }
+  .finally-image {
+    transform: scale(0.8);
+    right: -68px;
+  }
+}/*# sourceMappingURL=index.css.map */
